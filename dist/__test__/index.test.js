@@ -5,21 +5,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var index_1 = __importDefault(require("../index"));
 var executeAllTests = function (csc) {
-    test('Check for Country By Id ', function () {
-        var code = '38';
-        var country = csc.getCountryById(code);
-        expect(country).toEqual({ "id": "38", "name": "Canada", "phonecode": "1", "sortname": "CA" });
-    });
-    test('Check for State By Id ', function () {
-        var code = '32';
-        var state = csc.getStateById(code);
-        expect(state).toEqual({ "country_id": "101", "id": "32", "name": "Punjab" });
-    });
-    test('Check for City By Id ', function () {
-        var code = '31439';
-        var city = csc.getCityById(code);
-        expect(city).toEqual({ "id": "31439", "name": "Lahore", "state_id": "2728" });
-    });
     test('Check for Canada States', function () {
         var code = '38';
         var country = csc.getCountryById(code);

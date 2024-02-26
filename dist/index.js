@@ -11,9 +11,17 @@ exports.default = {
         return country_json_1.default;
     },
     getStatesOfCountry: function (countryId) {
-        return state_json_1.default[countryId];
+        var states = state_json_1.default[countryId];
+        if (!states) {
+            states = [];
+        }
+        return states;
     },
     getCitiesOfState: function(stateId) {
-        return city_json_1.default[stateId];
+        var cities = city_json_1.default[stateId];
+        if (!cities) {
+            cities = [];
+        }
+        return cities;
     },
 };

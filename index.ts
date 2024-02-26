@@ -10,9 +10,15 @@ export default {
     return countryList;
   },
   getStatesOfCountry: function(countryId: string): IState[] {
-    return stateList[countryId];
+    let states = stateList[countryId];
+    if (!states)
+      states = [];
+    return states;
   },
   getCitiesOfState: function(stateId: string): string[] {
-    return cityList[stateId]
+    let cities = cityList[stateId];
+    if (!cities)
+      cities = [];
+    return cities;
   },
 };
